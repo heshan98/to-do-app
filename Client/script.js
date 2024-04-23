@@ -15,7 +15,7 @@ function loadTasks() {
                         <span class="${task.completed ? 'completed' : ''}" onclick="editTask('${task.id}', this)">${task.task}</span>
                         <div class="task-buttons">
                         <input type="checkbox" class="task-checkbox" onchange="toggleComplete(this, '${task.id}', this.checked)" ${task.completed ? 'checked' : ''}>
-                            <button onclick="deleteTask('${task.id}')">Delete</button>
+                            <button onclick="deleteTask('${task.id}')"><span class="text">Delete</span></button>
                         </div>
                     
                 `;
