@@ -1,0 +1,79 @@
+
+.login-form {
+    margin: 180px auto;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-family: Arial, sans-serif;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+  
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    width: 370px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5f5f5;
+    color: #333;
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.1);
+  }
+  
+  button[type="submit"] {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  .signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .signup-link a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .signup-link a:hover {
+    color: #555;
+  }
+  .custom-snackbar {
+    background-color: red;
+    color: black;
+  }
+  .cdk-overlay-container{
+    z-index: 10000 !important;
+    background-color: red !important;
+  }
+  

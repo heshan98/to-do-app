@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="assets/css/signup.css">
 </head>
 <body>
-  <div class="container">
-    <h1>To-Do List</h1>
-    <input type="text" id="taskInput" placeholder="Add a new task">
-    <button onclick="addTask()">Add Task</button>
-    <ul id="taskList"></ul>
-  </div>
-  <script src="script.js"></script>
+    <div class="register-form">
+
+        <h2>Create an account</h2>
+        <form id="registerForm">
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" onclick="handleFormSubmission()">Sign up</button>
+        </form>
+
+        <div class="signup-link">
+            <span>Already have an account?</span>
+            <a href="/login.html">Log in here</a>
+        </div>
+
+    </div>
+    <script src="/assets/js/index.js"></script>
 </body>
 </html>
