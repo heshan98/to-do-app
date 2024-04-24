@@ -7,7 +7,6 @@ function login() {
         return;
     }
 
-   
     fetch('http://localhost:8080/api/auth/login', {
         method: 'POST',
         headers: {
@@ -23,13 +22,18 @@ function login() {
     })
     .then(user => {
         console.log('Logged in:', user);
-        
         localStorage.setItem('userId', user.id);
-        window.location.href = '/todo.html'; 
+        window.location.href = '/todo.html';
     })
     .catch(error => {
         console.error('Error logging in:', error.message);
-        alert(error.message); 
+        alert(error.message);
     });
 }
+
+
+document.getElementById('loginForm').addEventListener('submit', event => {
+    event.preventDefault(); 
+    login(); 
+});
 
