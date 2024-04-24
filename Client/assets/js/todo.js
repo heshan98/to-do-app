@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadTasks() {
     const taskList = document.getElementById('taskList');
     taskList.innerHTML = '';
-
-    fetch('http://localhost:8080/api/todo')
+    const userId = localStorage.getItem('userId');
+    fetch(`http://localhost:8080/api/todo?userId=${userId}`)
+    
         .then(response => response.json())
         .then(tasks => {
             tasks.forEach(task => {
@@ -27,10 +28,12 @@ function loadTasks() {
 
 function addTask() {
     const taskInput = document.getElementById('taskInput');
-
+    const userId = localStorage.getItem('userId');
+    //console.log(userId)
     const task = {
         task: taskInput.value,
-        completed: false
+        completed: false,
+        userId:userId
     };
 
     fetch('http://localhost:8080/api/todo', {
@@ -107,5 +110,11 @@ function saveEditedTask(taskId, newText) {
 
         })
         .catch(error => console.error('Error saving edited task:', error));
+}
+
+function logout() {
+    
+    localStorage.removeItem('userId');
+    window.location.href = '/login.html';
 }
 
